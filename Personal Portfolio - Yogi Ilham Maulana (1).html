@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogi Ilham Maulana (@yoginomercy) — Personal Profile & Portfolio</title>
+    <meta name="description" content="Personal Profile & Portfolio resmi milik Yogi Ilham Maulana (@yoginomercy). Temukan biodata, karya galeri, kontak, dan seluruh akun media sosial resmi.">
+    <meta name="keywords" content="Yogi Ilham Maulana, yoginomercy, Personal Portfolio, Personal Branding, Web Developer, Digital Creator">
+    <meta name="author" content="Yogi Ilham Maulana">
+    <meta name="theme-color" content="#04070d">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: '#04070d',
+                        navy: {
+                            950: '#060c1a',
+                            900: '#0a152e',
+                            800: '#11224a',
+                            700: '#19326b',
+                        },
+                        electric: {
+                            400: '#38bdf8',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 5s ease-in-out infinite',
+                        'spin-slow': 'spin 18s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Futuristik Scrollbar & Base Styles */
+        :root {
+            --bg-primary: #04070d;
+            --bg-navy: #0a152e;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #38bdf8;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #04070d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #11224a, #3b82f6);
+            border-radius: 9999px;
+        }
+
+        /* Latar belakang Grid Futuristik Halus */
+        .cyber-grid {
+            background-size: 48px 48px;
+            background-image: 
+                linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+        }
+
+        /* Glassmorphism Cards */
+        .glass-panel {
+            background: rgba(10, 21, 46, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.75);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(17, 34, 74, 0.45), rgba(6, 12, 26, 0.75));
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(56, 189, 248, 0.14);
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.45);
+            box-shadow: 0 18px 38px -12px rgba(59, 130, 246, 0.35), 0 0 20px rgba(56, 189, 248, 0.12);
+        }
+
+        /* Typewriter Cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 0.85s infinite;
+            color: #38bdf8;
+            margin-left: 2px;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Screen Transition */
+        #loader-screen {
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        #loader-screen.hidden-loader {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Equalizer Bar Animation untuk Pemutar Musik */
+        .eq-bar {
+            width: 3px;
+            border-radius: 9999px;
+            background: linear-gradient(180deg, #38bdf8, #3b82f6);
+            transition: height 0.2s ease;
+        }
+        .eq-playing .eq-bar:nth-child(1) { animation: eqBounce 0.8s ease-in-out infinite alternate; }
+        .eq-playing .eq-bar:nth-child(2) { animation: eqBounce 0.55s ease-in-out infinite alternate 0.15s; }
+        .eq-playing .eq-bar:nth-child(3) { animation: eqBounce 0.7s ease-in-out infinite alternate 0.3s; }
+        .eq-playing .eq-bar:nth-child(4) { animation: eqBounce 0.6s ease-in-out infinite alternate 0.1s; }
+        @keyframes eqBounce {
+            0% { height: 4px; }
+            100% { height: 16px; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-electric-500 selection:text-white cyber-grid relative">
+
+    <!-- ==================== 1. LOADING SCREEN ==================== -->
+    <div id="loader-screen" class="fixed inset-0 z-[100] bg-obsidian flex flex-col items-center justify-center">
+        <div class="relative flex items-center justify-center w-24 h-24">
+            <div class="absolute inset-0 rounded-full border-2 border-transparent border-t-electric-400 border-r-electric-500 animate-spin"></div>
+            <div class="absolute inset-2 rounded-full border-2 border-transparent border-b-white/60 animate-spin-slow"></div>
+            <span class="font-display font-bold text-2xl tracking-wider text-white">YIM</span>
+        </div>
+        <p class="mt-5 text-xs uppercase tracking-[0.35em] text-electric-400 animate-pulse">Initializing Profile...</p>
+    </div>
+
+    <!-- ==================== AMBIENT BACKGROUND GLOWS ==================== -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+        <div class="absolute -top-40 -left-40 w-[480px] h-[480px] rounded-full bg-navy-800/40 blur-[130px] animate-pulse-slow"></div>
+        <div class="absolute top-1/3 -right-40 w-[420px] h-[420px] rounded-full bg-electric-600/20 blur-[140px]"></div>
+        <div class="absolute bottom-0 left-1/4 w-[520px] h-[320px] rounded-full bg-navy-900/70 blur-[130px]"></div>
+    </div>
+
+    <!-- ==================== 2. NAVBAR STICKY GLASSMORPHISM ==================== -->
+    <header class="fixed top-0 inset-x-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4">
+            <nav class="glass-panel rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between">
+                <!-- Logo / Brand -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-electric-500 to-navy-800 border border-electric-400/40 flex items-center justify-center shadow-lg shadow-electric-500/20 group-hover:scale-105 transition-transform">
+                        <span id="nav-initials" class="font-display font-bold text-white text-base tracking-tight">YM</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <p id="nav-brand-name" class="font-display font-bold text-sm text-white leading-none">Yogi Ilham</p>
+                        <p id="nav-brand-user" class="text-[11px] text-electric-400 mt-0.5">@yoginomercy</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="#home" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">Home</a>
+                    <a href="#about" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">About</a>
+                    <a href="#social" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">Social Media</a>
+                    <a href="#gallery" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">Gallery</a>
+                    <a href="#contact" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">Contact</a>
+                </div>
+
+                <!-- Role Status & Controls -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- Badge Role Saat Ini -->
+                    <button onclick="openAuthModal()" title="Klik untuk ganti akun (Pengunjung / Admin)"
+                        class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-navy-900/90 border border-white/10 hover:border-electric-400/50 text-xs font-medium transition cursor-pointer">
+                        <span id="role-dot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span id="role-label" class="text-slate-200">Pengunjung</span>
+                        <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/>
+                        </svg>
+                    </button>
+
+                    <!-- Tombol Khusus Admin (Muncul saat login Admin) -->
+                    <button id="admin-edit-btn" onclick="openAdminDashboard()"
+                        class="hidden items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-electric-600 to-electric-400 text-white text-xs font-semibold shadow-lg shadow-electric-500/30 hover:brightness-110 transition cursor-pointer">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                        </svg>
+                        <span class="hidden sm:inline">Edit Profil</span>
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" aria-label="Buka Menu"
+                        class="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:text-white hover:bg-white/10 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-2 glass-panel rounded-2xl p-4 space-y-1">
+                <a href="#home" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10">Home</a>
+                <a href="#about" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10">About Me</a>
+                <a href="#social" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10">Media Sosial</a>
+                <a href="#gallery" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10">Galeri Foto</a>
+                <a href="#contact" onclick="closeMobileMenu()" class="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10">Kontak Saya</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 3. HERO SECTION (HOME) ==================== -->
+    <main>
+        <section id="home" class="min-h-screen flex items-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Kolom Kiri: Teks & CTA -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6 order-2 lg:order-1">
+                    <!-- Badge Animasi Typewriter -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-navy-900/90 border border-electric-400/30 shadow-inner">
+                        <span class="w-2 h-2 rounded-full bg-electric-400 animate-ping"></span>
+                        <span id="typewriter-text" class="text-xs sm:text-sm font-medium text-electric-400 tracking-wide typing-cursor">Welcome to My Personal Website</span>
+                    </div>
+
+                    <!-- Nama Lengkap -->
+                    <div class="space-y-2">
+                        <h1 id="hero-fullname" class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+                            Yogi Ilham Maulana
+                        </h1>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1">
+                            <span id="hero-username" class="px-3.5 py-1 rounded-lg bg-electric-500/15 border border-electric-400/30 text-electric-400 font-display font-semibold text-sm sm:text-base">
+                                @yoginomercy
+                            </span>
+                            <span id="hero-tagline" class="text-slate-400 text-sm sm:text-base font-medium">
+                                Digital Creator • Web Enthusiast • Visual Designer
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Deskripsi Singkat -->
+                    <p id="hero-bio" class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Halo! Selamat datang di ruang digital pribadi saya. Saya adalah pribadi kreatif yang antusias di bidang teknologi, desain visual, otomotif, dan pengembangan web modern. Mari terhubung dan berkolaborasi!
+                    </p>
+
+                    <!-- Tombol CTA -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#social"
+                            class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-electric-600 via-electric-500 to-electric-400 text-white font-semibold text-sm sm:text-base shadow-lg shadow-electric-500/30 hover:shadow-electric-400/50 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+                            <span>Lihat Media Sosial Saya</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="#contact"
+                            class="w-full sm:w-auto px-7 py-3.5 rounded-2xl glass-panel text-white font-semibold text-sm sm:text-base hover:bg-white/10 hover:border-electric-400/40 transition-all flex items-center justify-center gap-2">
+                            <span>Hubungi Saya</span>
+                        </a>
+                    </div>
+
+                    <!-- Mini Stats / Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-4 max-w-md mx-auto lg:mx-0 border-t border-white/10">
+                        <div>
+                            <p class="font-display text-xl sm:text-2xl font-bold text-white">8+</p>
+                            <p class="text-xs text-slate-400">Platform Sosial</p>
+                        </div>
+                        <div>
+                            <p id="hero-stat-gallery" class="font-display text-xl sm:text-2xl font-bold text-electric-400">6</p>
+                            <p class="text-xs text-slate-400">Momen Galeri</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-xl sm:text-2xl font-bold text-white">24/7</p>
+                            <p class="text-xs text-slate-400">Terhubung Online</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Foto Profil Futuristik -->
+                <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
+                    <div class="relative group animate-float">
+                        <!-- Lingkaran Cahaya Luar -->
+                        <div class="absolute -inset-3 rounded-full bg-gradient-to-tr from-electric-600 via-electric-400 to-white/40 opacity-50 blur-xl group-hover:opacity-80 transition duration-500"></div>
+                        
+                        <!-- Ring Orbit Dekoratif -->
+                        <div class="absolute -inset-4 rounded-full border border-dashed border-electric-400/35 animate-spin-slow pointer-events-none"></div>
+
+                        <!-- Bingkai Foto Utama -->
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-1.5 bg-gradient-to-b from-electric-400 via-navy-800 to-obsidian shadow-2xl">
+                            <div class="w-full h-full rounded-full overflow-hidden bg-navy-950 relative">
+                                <img id="hero-avatar"
+                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/600x600/0a152e/38bdf8?text=Yogi+Ilham';"
+                                    alt="Foto Profil Yogi Ilham Maulana"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+
+                        <!-- Floating Status Pill -->
+                        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 glass-panel px-4 py-2 rounded-2xl flex items-center gap-2 whitespace-nowrap border border-electric-400/30">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                            <span class="text-xs font-semibold text-white tracking-wide">Available to Connect</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== 4. ABOUT ME SECTION ==================== -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto reveal">
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-electric-400">Personal Identity</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">Tentang Saya</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-electric-500 to-white rounded-full mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Kartu Biodata Lengkap -->
+                    <div class="lg:col-span-6 glass-panel rounded-3xl p-6 sm:p-8 space-y-6">
+                        <div class="flex items-center gap-3 pb-4 border-b border-white/10">
+                            <div class="w-10 h-10 rounded-xl bg-electric-500/20 border border-electric-400/30 flex items-center justify-center text-electric-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display text-xl font-bold text-white">Biodata Diri</h3>
+                                <p class="text-xs text-slate-400">Informasi personal & domisili</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-4 rounded-2xl bg-navy-950/70 border border-white/5">
+                                <p class="text-xs text-slate-400">Nama Lengkap</p>
+                                <p id="about-fullname" class="text-sm sm:text-base font-semibold text-white mt-1">Yogi Ilham Maulana</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-navy-950/70 border border-white/5">
+                                <p class="text-xs text-slate-400">Nama Panggilan</p>
+                                <p id="about-nickname" class="text-sm sm:text-base font-semibold text-electric-400 mt-1">Yogi (@yoginomercy)</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-navy-950/70 border border-white/5">
+                                <p class="text-xs text-slate-400">Umur</p>
+                                <p id="about-age" class="text-sm sm:text-base font-semibold text-white mt-1">23 Tahun</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-navy-950/70 border border-white/5">
+                                <p class="text-xs text-slate-400">Tempat Tinggal</p>
+                                <p id="about-location" class="text-sm sm:text-base font-semibold text-white mt-1">Jawa Barat, Indonesia</p>
+                            </div>
+                        </div>
+
+                        <!-- Hobi -->
+                        <div class="p-4 rounded-2xl bg-navy-950/70 border border-white/5">
+                            <p class="text-xs text-slate-400 mb-2">Hobi & Minat</p>
+                            <div id="about-hobbies-list" class="flex flex-wrap gap-2">
+                                <!-- Diisi via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Kepribadian, Aktivitas & Keahlian -->
+                    <div class="lg:col-span-6 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3 pb-4 border-b border-white/10">
+                                <div class="w-10 h-10 rounded-xl bg-electric-500/20 border border-electric-400/30 flex items-center justify-center text-electric-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-display text-xl font-bold text-white">Kepribadian & Aktivitas</h3>
+                                    <p class="text-xs text-slate-400">Karakter, visi, dan keseharian</p>
+                                </div>
+                            </div>
+
+                            <p id="about-personality" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                Saya adalah individu yang adaptif, terbuka terhadap wawasan baru, dan memiliki rasa ingin tahu tinggi terhadap perkembangan teknologi digital maupun dunia kreatif. Di waktu luang, saya gemar mengeksplorasi desain antarmuka modern, touring menikmati suasana alam, serta berolahraga bersama teman-teman.
+                            </p>
+                        </div>
+
+                        <!-- Keahlian -->
+                        <div class="pt-2">
+                            <p class="text-xs uppercase tracking-wider text-electric-400 font-semibold mb-3">Keahlian Utama (Skills)</p>
+                            <div id="about-skills-list" class="flex flex-wrap gap-2.5">
+                                <!-- Diisi via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. MEDIA SOSIAL SECTION ==================== -->
+        <section id="social" class="py-20 px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto reveal">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-electric-400">Stay Connected</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">Media Sosial Saya</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-3">Temukan aktivitas terbaru, konten kreatif, dan terhubung langsung melalui platform pilihan Anda.</p>
+                </div>
+
+                <!-- Grid 8 Kartu Media Sosial -->
+                <div id="social-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <!-- Dirender otomatis oleh JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 6. GALERI FOTO SECTION ==================== -->
+        <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto reveal">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-[0.25em] text-electric-400">Visual Archive</span>
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">Galeri Foto</h2>
+                        <p class="text-slate-400 text-sm sm:text-base mt-2">Klik pada foto mana saja untuk melihat tampilan layar penuh.</p>
+                    </div>
+                    <!-- Tombol Tambah Foto Cepat (Hanya tampil saat Admin login) -->
+                    <button id="gallery-admin-add-btn" onclick="openAdminDashboard('gallery')"
+                        class="hidden items-center gap-2 px-4 py-2.5 rounded-xl bg-electric-500/20 border border-electric-400/40 text-electric-400 hover:bg-electric-500 hover:text-white text-sm font-semibold transition cursor-pointer self-start sm:self-auto">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                        </svg>
+                        <span>Kelola Galeri (Admin)</span>
+                    </button>
+                </div>
+
+                <!-- Grid Galeri -->
+                <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Dirender otomatis oleh JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 7. KONTAK SAYA SECTION ==================== -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto reveal">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-electric-400">Get In Touch</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">Kontak Saya</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-3">Punya pertanyaan, ajakan kolaborasi, atau sekadar ingin menyapa? Jangan ragu untuk menghubungi saya.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Kartu Info Kontak Langsung -->
+                    <div class="lg:col-span-5 space-y-5">
+                        <!-- Card WhatsApp -->
+                        <div class="glass-card rounded-3xl p-6 space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center text-emerald-400 shrink-0">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">WhatsApp Langsung</p>
+                                    <p id="contact-wa-display" class="font-display font-bold text-white text-base sm:text-lg">+62 812-3456-7890</p>
+                                </div>
+                            </div>
+                            <a id="contact-wa-btn" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+                                class="w-full py-3 px-4 rounded-xl bg-emerald-500/20 hover:bg-emerald-500 text-emerald-300 hover:text-white border border-emerald-400/30 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                                <span>Chat via WhatsApp</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Card Email Pribadi -->
+                        <div class="glass-card rounded-3xl p-6 space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-electric-500/15 border border-electric-400/30 flex items-center justify-center text-electric-400 shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="min-w-0 flex-1">
+                                    <p class="text-xs text-slate-400">Email Pribadi</p>
+                                    <p id="contact-email-display" class="font-display font-bold text-white text-sm sm:text-base truncate">yoginomercy@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2.5">
+                                <a id="contact-mailto-btn" href="mailto:yoginomercy@gmail.com"
+                                    class="py-2.5 px-3 rounded-xl bg-electric-500/20 hover:bg-electric-500 text-electric-300 hover:text-white border border-electric-400/30 font-semibold text-xs sm:text-sm transition-all text-center">
+                                    Kirim Email
+                                </a>
+                                <button onclick="copyEmailAddress()"
+                                    class="py-2.5 px-3 rounded-xl bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 font-semibold text-xs sm:text-sm transition-all cursor-pointer">
+                                    Salin Email
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Kirim Pesan -->
+                    <div class="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-8">
+                        <h3 class="font-display text-xl font-bold text-white mb-1">Kirim Pesan Cepat</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 mb-6">Pesan Anda akan tersimpan ke kotak masuk Admin dan dapat langsung diteruskan ke WhatsApp.</p>
+
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="sender-name" class="block text-xs font-medium text-slate-300 mb-1.5">Nama Anda</label>
+                                    <input type="text" id="sender-name" required placeholder="Masukkan nama lengkap"
+                                        class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-electric-400 transition">
+                                </div>
+                                <div>
+                                    <label for="sender-email" class="block text-xs font-medium text-slate-300 mb-1.5">Email / Kontak Anda</label>
+                                    <input type="text" id="sender-email" required placeholder="email@contoh.com / @username"
+                                        class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-electric-400 transition">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="sender-message" class="block text-xs font-medium text-slate-300 mb-1.5">Isi Pesan</label>
+                                <textarea id="sender-message" rows="4" required placeholder="Tulis pesan, masukan, atau tawaran kerja sama Anda di sini..."
+                                    class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-electric-400 transition resize-none"></textarea>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3 pt-1">
+                                <button type="submit"
+                                    class="flex-1 py-3.5 px-6 rounded-xl bg-gradient-to-r from-electric-600 to-electric-400 text-white font-semibold text-sm shadow-lg shadow-electric-500/25 hover:brightness-110 transition cursor-pointer flex items-center justify-center gap-2">
+                                    <span>Kirim Pesan Sekarang</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                    </svg>
+                                </button>
+                                <button type="button" onclick="sendViaWhatsAppForm()"
+                                    class="py-3.5 px-5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 font-semibold text-sm transition cursor-pointer">
+                                    Kirim ke WA
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== 8. FOOTER ==================== -->
+    <footer class="border-t border-white/10 bg-navy-950/80 backdrop-blur-md py-10 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-electric-500/20 border border-electric-400/30 flex items-center justify-center font-display font-bold text-white text-sm">
+                    YM
+                </div>
+                <div>
+                    <p id="footer-name" class="text-sm font-semibold text-white">Yogi Ilham Maulana</p>
+                    <p class="text-xs text-slate-400">Personal Branding & Digital Portfolio</p>
+                </div>
+            </div>
+            <p class="text-xs text-slate-400 text-center sm:text-right">
+                &copy; <span id="footer-year">2026</span> <span id="footer-copy-name" class="text-slate-200 font-medium">Yogi Ilham Maulana (@yoginomercy)</span>. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== TOMBOL KEMBALI KE ATAS ==================== -->
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Kembali ke atas"
+        class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-2xl bg-gradient-to-tr from-electric-600 to-electric-400 text-white shadow-lg shadow-electric-500/40 flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:scale-110 cursor-pointer">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <!-- ==================== FLOATING BACKGROUND MUSIC PLAYER (ON/OFF LAGU) ==================== -->
+    <div id="music-player-widget" class="fixed bottom-6 left-6 z-40 max-w-[290px] sm:max-w-xs">
+        <!-- Panel Daftar Lagu Cepat (Popup saat judul diklik) -->
+        <div id="music-playlist-popover" class="hidden mb-2.5 glass-panel rounded-2xl p-3 border border-electric-400/30 shadow-2xl space-y-2">
+            <div class="flex items-center justify-between px-1 pb-1.5 border-b border-white/10">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-electric-400">Pilih Lagu Latar</span>
+                <button onclick="togglePlaylistPopover()" class="text-slate-400 hover:text-white text-xs cursor-pointer">&times;</button>
+            </div>
+            <div id="quick-playlist-items" class="max-h-44 overflow-y-auto space-y-1 pr-1">
+                <!-- Diisi otomatis oleh JavaScript -->
+            </div>
+        </div>
+
+        <!-- Kapsul Kontrol Utama On/Off Musik -->
+        <div class="glass-panel rounded-2xl p-2.5 pr-3.5 border border-electric-400/30 shadow-xl shadow-obsidian/80 flex items-center gap-3">
+            <!-- Tombol ON / OFF Utama -->
+            <button id="music-toggle-btn" onclick="toggleBackgroundMusic()" aria-label="Nyalakan atau Matikan Musik"
+                class="w-11 h-11 rounded-xl bg-gradient-to-br from-electric-600 to-electric-400 text-white flex items-center justify-center shadow-lg shadow-electric-500/30 hover:brightness-110 active:scale-95 transition shrink-0 cursor-pointer relative">
+                <!-- Ikon Play (Muncul saat OFF) -->
+                <svg id="icon-music-off" class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                <!-- Ikon Pause / ON (Muncul saat ON) -->
+                <svg id="icon-music-on" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                </svg>
+            </button>
+
+            <!-- Info Lagu & Equalizer -->
+            <div onclick="togglePlaylistPopover()" class="min-w-0 flex-1 cursor-pointer group" title="Klik untuk ganti lagu">
+                <div class="flex items-center gap-2">
+                    <span id="music-status-badge" class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-white/10 text-slate-300">
+                        OFF
+                    </span>
+                    <div id="music-eq" class="flex items-end gap-0.5 h-4">
+                        <span class="eq-bar h-1.5"></span>
+                        <span class="eq-bar h-2.5"></span>
+                        <span class="eq-bar h-1"></span>
+                        <span class="eq-bar h-2"></span>
+                    </div>
+                </div>
+                <p id="music-current-title" class="text-xs font-bold text-white truncate mt-1 group-hover:text-electric-400 transition">
+                    Memuat lagu...
+                </p>
+                <p id="music-current-artist" class="text-[10px] text-slate-400 truncate">
+                    Klik tombol untuk memutar
+                </p>
+            </div>
+
+            <!-- Tombol Lagu Berikutnya -->
+            <button onclick="playNextTrack()" title="Lagu Berikutnya" aria-label="Lagu Berikutnya"
+                class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white flex items-center justify-center transition shrink-0 cursor-pointer">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+                </svg>
+            </button>
+        </div>
+        <audio id="bg-audio-player" preload="metadata" loop></audio>
+    </div>
+
+    <!-- ==================== TOAST NOTIFICATION ==================== -->
+    <div id="toast-container" class="fixed top-24 right-6 z-[90] flex flex-col gap-2 pointer-events-none"></div>
+                            <p class="text-xs text-slate-400">Jelajahi portofolio, galeri & kirim pesan</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-semibold text-emerald-400 group-hover:translate-x-1 transition-transform">Masuk &rarr;</span>
+                </button>
+            </div>
+
+            <div class="relative flex py-2 items-center mb-5">
+                <div class="flex-grow border-t border-white/10"></div>
+                <span class="flex-shrink mx-3 text-[11px] uppercase tracking-wider text-slate-500">Atau Login Admin</span>
+                <div class="flex-grow border-t border-white/10"></div>
+            </div>
+
+            <!-- Form Login Admin -->
+            <form onsubmit="handleAdminLogin(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Username Admin</label>
+                    <input type="text" id="admin-user-input" required placeholder="Masukkan username admin"
+                        class="w-full px-4 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm focus:outline-none focus:border-electric-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Password Admin</label>
+                    <input type="password" id="admin-pass-input" required placeholder="••••••••"
+                        class="w-full px-4 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm focus:outline-none focus:border-electric-400">
+                </div>
+                <button type="submit"
+                    class="w-full py-3 rounded-xl bg-gradient-to-r from-electric-600 to-electric-400 text-white font-semibold text-sm shadow-lg shadow-electric-500/25 hover:brightness-110 transition cursor-pointer">
+                    Login sebagai Admin
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL 3: DASHBOARD ADMIN (LIVE EDITOR CMS) ==================== -->
+    <div id="admin-dashboard-modal" onclick="closeAdminDashboard(event)"
+        class="fixed inset-0 z-[85] bg-obsidian/90 backdrop-blur-xl hidden items-center justify-center p-3 sm:p-6">
+        <div class="max-w-4xl w-full max-h-[90vh] glass-panel rounded-3xl border border-electric-400/30 shadow-2xl flex flex-col overflow-hidden" onclick="event.stopPropagation()">
+            
+            <!-- Header Dashboard -->
+            <div class="px-6 py-4 bg-navy-900/90 border-b border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <span class="px-2.5 py-1 rounded-lg bg-electric-500 text-white text-xs font-bold uppercase tracking-wider">Admin CMS</span>
+                    <h3 class="font-display font-bold text-lg text-white">Kelola Konten Portofolio</h3>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="resetToDefaultData()" title="Kembalikan data awal"
+                        class="px-3 py-1.5 rounded-xl bg-rose-500/15 hover:bg-rose-500 text-rose-300 hover:text-white border border-rose-500/30 text-xs font-semibold transition cursor-pointer">
+                        Reset Default
+                    </button>
+                    <button onclick="closeAdminDashboard()"
+                        class="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 flex items-center justify-center transition cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabs Navigasi Admin -->
+            <div class="px-6 pt-3 bg-navy-950/80 border-b border-white/10 flex gap-2 overflow-x-auto">
+                <button onclick="switchAdminTab('profile')" id="tab-btn-profile" class="admin-tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 border-electric-400 text-electric-400 whitespace-nowrap cursor-pointer">
+                    Profil & Biodata
+                </button>
+                <button onclick="switchAdminTab('socials')" id="tab-btn-socials" class="admin-tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap cursor-pointer">
+                    Media Sosial
+                </button>
+                <button onclick="switchAdminTab('gallery')" id="tab-btn-gallery" class="admin-tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap cursor-pointer">
+                    Galeri Foto
+                </button>
+                <button onclick="switchAdminTab('music')" id="tab-btn-music" class="admin-tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap cursor-pointer">
+                    Musik & Lagu (<span id="admin-music-count">0</span>)
+                </button>
+                <button onclick="switchAdminTab('messages')" id="tab-btn-messages" class="admin-tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap cursor-pointer">
+                    Pesan Masuk (<span id="inbox-count">0</span>)
+                </button>
+                <button onclick="switchAdminTab('security')" id="tab-btn-security" class="admin-tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap cursor-pointer">
+                    Keamanan Akun
+                </button>
+            </div>
+
+            <!-- Konten Scrollable Form Admin -->
+            <div class="p-6 overflow-y-auto flex-1 space-y-6">
+                
+                <!-- TAB 1: PROFIL & BIODATA -->
+                <form id="admin-profile-form" onsubmit="saveProfileChanges(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Nama Lengkap</label>
+                            <input type="text" id="edit-fullname" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Username (tanpa @)</label>
+                            <input type="text" id="edit-username" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Nama Panggilan</label>
+                            <input type="text" id="edit-nickname" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Umur</label>
+                            <input type="text" id="edit-age" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Tempat Tinggal</label>
+                            <input type="text" id="edit-location" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Tagline Singkat</label>
+                            <input type="text" id="edit-tagline" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1.5">Foto Profil (Pilih dari Galeri Perangkat atau URL)</label>
+                        <div class="p-3.5 rounded-2xl bg-navy-950/90 border border-white/10 space-y-3">
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <img id="edit-avatar-preview" src="" alt="Preview Foto Profil"
+                                    class="w-16 h-16 rounded-full object-cover border-2 border-electric-400/50 shrink-0 bg-navy-900">
+                                <div class="flex-1 w-full space-y-2">
+                                    <label class="w-full py-2.5 px-4 rounded-xl bg-electric-500/20 hover:bg-electric-500 text-electric-300 hover:text-white border border-electric-400/30 text-xs font-semibold transition flex items-center justify-center gap-2 cursor-pointer">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                        </svg>
+                                        <span>Pilih Foto Profil dari Galeri</span>
+                                        <input type="file" id="edit-avatar-file" accept="image/*" onchange="handleAvatarFileSelect(event)" class="hidden">
+                                    </label>
+                                    <input type="text" id="edit-avatar" oninput="syncAvatarPreviewFromUrl(this.value)" placeholder="Atau tempel URL foto profil..."
+                                        class="w-full px-3 py-2 rounded-xl bg-navy-900 border border-white/10 text-white text-xs focus:outline-none focus:border-electric-400">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Nomor WhatsApp (Format 628xxx)</label>
+                            <input type="text" id="edit-wa-number" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Email Pribadi</label>
+                            <input type="email" id="edit-email" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Hobi (Pisahkan dengan koma)</label>
+                        <input type="text" id="edit-hobbies" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Keahlian (Pisahkan dengan koma)</label>
+                        <input type="text" id="edit-skills" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Deskripsi Singkat Hero</label>
+                        <textarea id="edit-bio" rows="2" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Deskripsi Kepribadian & Aktivitas</label>
+                        <textarea id="edit-personality" rows="3" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 rounded-xl bg-electric-500 hover:bg-electric-400 text-white font-semibold text-sm transition cursor-pointer">
+                        Simpan Perubahan Profil
+                    </button>
+                </form>
+
+                <!-- TAB 2: MEDIA SOSIAL -->
+                <form id="admin-socials-form" onsubmit="saveSocialChanges(event)" class="hidden space-y-4">
+                    <div id="admin-socials-inputs" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Diisi otomatis oleh JS -->
+                    </div>
+                    <button type="submit" class="w-full py-3 rounded-xl bg-electric-500 hover:bg-electric-400 text-white font-semibold text-sm transition cursor-pointer">
+                        Simpan Tautan Media Sosial
+                    </button>
+                </form>
+
+                <!-- TAB 3: GALERI FOTO -->
+                <div id="admin-gallery-panel" class="hidden space-y-6">
+                    <form onsubmit="addNewGalleryPhoto(event)" class="p-4 rounded-2xl bg-navy-950/90 border border-white/10 space-y-3">
+                        <h4 class="text-sm font-bold text-white">Tambah Foto Baru ke Galeri</h4>
+                        
+                        <!-- Pemilih File dari Galeri HP / Komputer -->
+                        <div class="flex flex-col sm:flex-row items-center gap-3">
+                            <label class="w-full sm:w-auto flex-1 py-3 px-4 rounded-xl bg-electric-500/20 hover:bg-electric-500 text-electric-300 hover:text-white border border-dashed border-electric-400/50 text-xs font-semibold transition flex items-center justify-center gap-2 cursor-pointer">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                                </svg>
+                                <span id="new-photo-file-label">Pilih Foto dari Galeri HP / Perangkat</span>
+                                <input type="file" id="new-photo-file" accept="image/*" onchange="handleGalleryFileSelect(event)" class="hidden">
+                            </label>
+                            <div id="new-photo-preview-box" class="hidden w-16 h-12 rounded-xl overflow-hidden border border-electric-400/40 shrink-0 bg-navy-900">
+                                <img id="new-photo-preview-img" src="" alt="Preview" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <input type="text" id="new-photo-title" required placeholder="Judul Foto (Wajib)" class="px-3.5 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-white text-sm">
+                            <input type="text" id="new-photo-url" oninput="handleGalleryUrlInput(this.value)" placeholder="Atau tempel URL Gambar (Opsional)" class="px-3.5 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-white text-sm">
+                        </div>
+                        <input type="text" id="new-photo-desc" required placeholder="Deskripsi singkat momen foto" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-white text-sm">
+                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-electric-500 hover:bg-electric-400 text-white text-xs font-semibold transition cursor-pointer">
+                            + Tambahkan Foto ke Galeri
+                        </button>
+                    </form>
+
+                    <div id="admin-gallery-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <!-- Daftar foto untuk dihapus -->
+                    </div>
+                </div>
+
+                <!-- TAB 4: MUSIK & LAGU LATAR -->
+                <div id="admin-music-panel" class="hidden space-y-6">
+                    <form onsubmit="addNewMusicTrack(event)" class="p-4 rounded-2xl bg-navy-950/90 border border-white/10 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-sm font-bold text-white">Tambah Lagu Baru (Upload MP3/Audio atau URL)</h4>
+                            <span class="text-[11px] text-electric-400">Mendukung MP3, WAV, OGG, M4A</span>
+                        </div>
+
+                        <!-- Upload File Audio dari Perangkat -->
+                        <div>
+                            <label class="w-full py-3 px-4 rounded-xl bg-electric-500/20 hover:bg-electric-500 text-electric-300 hover:text-white border border-dashed border-electric-400/50 text-xs font-semibold transition flex items-center justify-center gap-2 cursor-pointer">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                                </svg>
+                                <span id="new-audio-file-label">Pilih File Lagu dari HP / Komputer</span>
+                                <input type="file" id="new-audio-file" accept="audio/*" onchange="handleAudioFileSelect(event)" class="hidden">
+                            </label>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <input type="text" id="new-music-title" required placeholder="Judul Lagu (Wajib)" class="px-3.5 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-white text-sm">
+                            <input type="text" id="new-music-artist" required placeholder="Nama Penyanyi / Artis" class="px-3.5 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-white text-sm">
+                        </div>
+
+                        <input type="url" id="new-music-url" oninput="handleAudioUrlInput(this.value)" placeholder="Atau tempel URL Audio langsung (https://.../lagu.mp3)" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-white text-sm">
+
+                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-electric-600 to-electric-400 text-white text-xs font-semibold shadow-lg shadow-electric-500/20 hover:brightness-110 transition cursor-pointer">
+                            + Tambahkan Lagu ke Playlist
+                        </button>
+                    </form>
+
+                    <div class="space-y-2.5">
+                        <p class="text-xs text-slate-400">Daftar Lagu Tersimpan (Klik "Putar" untuk mengaktifkan atau "Hapus" untuk membuang):</p>
+                        <div id="admin-music-list" class="space-y-2.5">
+                            <!-- Daftar lagu dirender via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 5: PESAN MASUK PENGUNJUNG -->
+                <div id="admin-messages-panel" class="hidden space-y-3">
+                    <div class="flex items-center justify-between">
+                        <p class="text-xs text-slate-400">Daftar pesan yang dikirim pengunjung melalui form kontak:</p>
+                        <button onclick="clearAllMessages()" class="text-xs text-rose-400 hover:underline cursor-pointer">Hapus Semua</button>
+                    </div>
+                    <div id="admin-messages-list" class="space-y-3">
+                        <!-- Pesan dari localStorage -->
+                    </div>
+                </div>
+
+                <!-- TAB 5: KEAMANAN AKUN (GANTI USERNAME & PASSWORD ADMIN) -->
+                <form id="admin-security-form" onsubmit="saveAdminCredentials(event)" class="hidden space-y-4 max-w-lg mx-auto">
+                    <div class="p-4 rounded-2xl bg-electric-500/10 border border-electric-400/25 flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-electric-500/20 text-electric-400 flex items-center justify-center shrink-0 mt-0.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Pengaturan Kredensial Admin</h4>
+                            <p class="text-xs text-slate-300 mt-0.5">Perbarui username dan password login Admin Anda. Pastikan mengingat kredensial baru yang disimpan.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Password Saat Ini</label>
+                        <div class="relative">
+                            <input type="password" id="sec-current-pass" required placeholder="Masukkan password saat ini"
+                                class="w-full px-3.5 py-2.5 pr-10 rounded-xl bg-navy-950 border border-white/10 text-white text-sm focus:outline-none focus:border-electric-400">
+                            <button type="button" onclick="togglePasswordVisibility('sec-current-pass', this)" aria-label="Tampilkan/Sembunyikan Password"
+                                class="absolute inset-y-0 right-3 flex items-center text-slate-400 hover:text-white cursor-pointer">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Username Admin Baru</label>
+                        <input type="text" id="sec-new-user" required placeholder="Masukkan username baru"
+                            class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/10 text-white text-sm focus:outline-none focus:border-electric-400">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Password Baru (Minimal 6 karakter)</label>
+                        <div class="relative">
+                            <input type="password" id="sec-new-pass" required minlength="6" placeholder="Masukkan password baru"
+                                class="w-full px-3.5 py-2.5 pr-10 rounded-xl bg-navy-950 border border-white/10 text-white text-sm focus:outline-none focus:border-electric-400">
+                            <button type="button" onclick="togglePasswordVisibility('sec-new-pass', this)" aria-label="Tampilkan/Sembunyikan Password"
+                                class="absolute inset-y-0 right-3 flex items-center text-slate-400 hover:text-white cursor-pointer">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Konfirmasi Password Baru</label>
+                        <div class="relative">
+                            <input type="password" id="sec-confirm-pass" required minlength="6" placeholder="Ulangi password baru"
+                                class="w-full px-3.5 py-2.5 pr-10 rounded-xl bg-navy-950 border border-white/10 text-white text-sm focus:outline-none focus:border-electric-400">
+                            <button type="button" onclick="togglePasswordVisibility('sec-confirm-pass', this)" aria-label="Tampilkan/Sembunyikan Password"
+                                class="absolute inset-y-0 right-3 flex items-center text-slate-400 hover:text-white cursor-pointer">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-electric-600 to-electric-400 text-white font-semibold text-sm shadow-lg shadow-electric-500/25 hover:brightness-110 transition cursor-pointer">
+                        Simpan Username & Password Baru
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT CONFIGURATION & LOGIC ==================== -->
+    <script>
+        /**
+         * ============================================================================
+         * KONFIGURASI UTAMA WEBSITE (MUDAH DIEDIT)
+         * Silakan ubah data di bawah ini untuk mengganti biodata, kredensial admin,
+         * tautan media sosial, maupun foto galeri default secara permanen.
+         * ============================================================================
+         */
+        const DEFAULT_ADMIN_CREDENTIALS = {
+            username: "admin",
+            password: "admin123"
+        };
+
+        const DEFAULT_CONFIG = {
+            profile: {
+                fullName: "Yogi Ilham Maulana",
+                username: "yoginomercy",
+                nickname: "Yogi",
+                age: "23 Tahun",
+                location: "Jawa Barat, Indonesia",
+                tagline: "Digital Creator • Web Enthusiast • Visual Designer",
+                avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+                shortBio: "Halo! Selamat datang di ruang digital pribadi saya. Saya adalah pribadi kreatif yang antusias di bidang teknologi, desain visual, otomotif, dan pengembangan web modern. Mari terhubung dan berkolaborasi!",
+                personality: "Saya adalah individu yang adaptif, terbuka terhadap wawasan baru, dan memiliki rasa ingin tahu tinggi terhadap perkembangan teknologi digital maupun dunia kreatif. Di waktu luang, saya gemar mengeksplorasi desain antarmuka modern, touring menikmati suasana alam, serta berolahraga bersama teman-teman.",
+                hobbies: ["Futsal", "Touring & Otomotif", "Desain Grafis", "Gaming", "Fotografi"],
+                skills: ["Web Development", "UI/UX & Canva Design", "Content Creation", "Social Media Branding", "Video Editing"],
+                whatsappNumber: "6281234567890", // Format internasional tanpa tanda +
+                email: "yoginomercy@gmail.com"
+            },
+            socials: [
+                { id: "instagram", name: "Instagram", username: "@yoginomercy", url: "https://instagram.com/yoginomercy", color: "from-pink-500 to-amber-500" },
+                { id: "tiktok", name: "TikTok", username: "@yoginomercy", url: "https://tiktok.com/@yoginomercy", color: "from-cyan-400 to-rose-500" },
+                { id: "facebook", name: "Facebook", username: "Yogi Ilham Maulana", url: "https://facebook.com/yoginomercy", color: "from-blue-600 to-blue-400" },
+                { id: "youtube", name: "YouTube", username: "@yoginomercy", url: "https://youtube.com/@yoginomercy", color: "from-red-600 to-red-400" },
+                { id: "whatsapp", name: "WhatsApp", username: "+62 812-3456-7890", url: "https://wa.me/6281234567890", color: "from-emerald-500 to-teal-400" },
+                { id: "telegram", name: "Telegram", username: "@yoginomercy", url: "https://t.me/yoginomercy", color: "from-sky-500 to-blue-400" },
+                { id: "github", name: "GitHub", username: "yoginomercy", url: "https://github.com/yoginomercy", color: "from-slate-600 to-slate-400" },
+                { id: "twitter", name: "X (Twitter)", username: "@yoginomercy", url: "https://x.com/yoginomercy", color: "from-slate-700 to-slate-500" }
+            ],
+            gallery: [
+                {
+                    id: 1,
+                    title: "Night City Ride",
+                    desc: "Menikmati suasana malam kota dan lampu jalanan.",
+                    url: "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=900&q=80"
+                },
+                {
+                    id: 2,
+                    title: "Workspace Setup",
+                    desc: "Ruang kerja minimalis untuk merancang ide dan kode.",
+                    url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                },
+                {
+                    id: 3,
+                    title: "Weekend Touring",
+                    desc: "Perjalanan santai melepas penat di akhir pekan.",
+                    url: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=900&q=80"
+                },
+                {
+                    id: 4,
+                    title: "Futsal Match Night",
+                    desc: "Menjaga kebugaran dan kekompakan tim di lapangan.",
+                    url: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=80"
+                },
+                {
+                    id: 5,
+                    title: "Creative Exploration",
+                    desc: "Eksplorasi desain visual dan konsep futuristik.",
+                    url: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80"
+                },
+                {
+                    id: 6,
+                    title: "Coffee & Reflection",
+                    desc: "Secangkir kopi hangat sebelum memulai aktivitas harian.",
+                    url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
+                }
+            ],
+            musicPlaylist: [
+                {
+                    id: "default-1",
+                    title: "Midnight Cyber Chill",
+                    artist: "Yogi Ambient Selection",
+                    sourceType: "url",
+                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                },
+                {
+                    id: "default-2",
+                    title: "Electric Horizon",
+                    artist: "NoMercy Synthwave",
+                    sourceType: "url",
+                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
+                }
+            ],
+            activeTrackId: "default-1"
+        };
+
+        // Ikon SVG Tajam untuk 8 Platform Media Sosial
+        const SOCIAL_ICONS = {
+            instagram: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`,
+            tiktok: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>`,
+            facebook: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>`,
+            youtube: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
+            whatsapp: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>`,
+            telegram: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>`,
+            github: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>`,
+            twitter: `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`
+        };
+
+        // State Aplikasi
+        const STORAGE_KEY = "yoginomercy_portfolio_data_v1";
+        const ROLE_KEY = "yoginomercy_user_role_v1";
+        const MSG_KEY = "yoginomercy_contact_messages_v1";
+        const AUTH_KEY = "yoginomercy_admin_auth_v1";
+
+        let siteData = loadSiteData();
+        let adminCredentials = loadAdminCredentials();
+        let currentRole = localStorage.getItem(ROLE_KEY) || "visitor"; // 'visitor' atau 'admin'
+
+        function loadAdminCredentials() {
+            try {
+                const saved = localStorage.getItem(AUTH_KEY);
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (parsed && parsed.username && parsed.password) return parsed;
+                }
+            } catch (e) {
+                console.error("Gagal memuat kredensial admin:", e);
+            }
+            return { ...DEFAULT_ADMIN_CREDENTIALS };
+        }
+
+        function loadSiteData() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (!Array.isArray(parsed.musicPlaylist) || parsed.musicPlaylist.length === 0) {
+                        parsed.musicPlaylist = JSON.parse(JSON.stringify(DEFAULT_CONFIG.musicPlaylist));
+                        parsed.activeTrackId = DEFAULT_CONFIG.activeTrackId;
+                    }
+                    return parsed;
+                }
+            } catch (e) {
+                console.error("Gagal memuat data dari localStorage:", e);
+            }
+            return JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+        }
+
+        function saveSiteData() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(siteData));
+                return true;
+            } catch (e) {
+                console.error("Gagal menyimpan data:", e);
+                showToast("Kapasitas penyimpanan penuh! Hapus beberapa foto lama atau gunakan ukuran lebih kecil.", "error");
+                return false;
+            }
+        }
+
+        // ==================== INDEXEDDB UNTUK PENYIMPANAN FILE AUDIO LOKAL ====================
+        const AUDIO_DB_NAME = "yoginomercy_audio_db";
+        const AUDIO_STORE_NAME = "audio_files";
+        let pendingAudioFile = null;
+        let currentObjectUrl = null;
+        let isMusicPlaying = false;
+
+        function openAudioDB() {
+            return new Promise((resolve, reject) => {
+                const request = indexedDB.open(AUDIO_DB_NAME, 1);
+                request.onupgradeneeded = (e) => {
+                    const db = e.target.result;
+                    if (!db.objectStoreNames.contains(AUDIO_STORE_NAME)) {
+                        db.createObjectStore(AUDIO_STORE_NAME);
+                    }
+                };
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+            });
+        }
+
+        async function saveAudioBlobToDB(id, fileBlob) {
+            const db = await openAudioDB();
+            return new Promise((resolve, reject) => {
+                const tx = db.transaction(AUDIO_STORE_NAME, "readwrite");
+                tx.objectStore(AUDIO_STORE_NAME).put(fileBlob, id);
+                tx.oncomplete = () => resolve(true);
+                tx.onerror = () => reject(tx.error);
+            });
+        }
+
+        async function getAudioBlobFromDB(id) {
+            const db = await openAudioDB();
+            return new Promise((resolve, reject) => {
+                const tx = db.transaction(AUDIO_STORE_NAME, "readonly");
+                const req = tx.objectStore(AUDIO_STORE_NAME).get(id);
+                req.onsuccess = () => resolve(req.result || null);
+                req.onerror = () => reject(req.error);
+            });
+        }
+
+        async function deleteAudioBlobFromDB(id) {
+            try {
+                const db = await openAudioDB();
+                const tx = db.transaction(AUDIO_STORE_NAME, "readwrite");
+                tx.objectStore(AUDIO_STORE_NAME).delete(id);
+            } catch (e) {
+                console.error("Gagal menghapus blob audio:", e);
+            }
+        }
+
+        // ==================== LOGIKA PEMUTAR MUSIK LATAR (ON / OFF LAGU) ====================
+        function getActiveTrack() {
+            const list = siteData.musicPlaylist || [];
+            if (list.length === 0) return null;
+            return list.find(t => t.id === siteData.activeTrackId) || list[0];
+        }
+
+        async function loadTrackIntoPlayer(track, autoPlay = false) {
+            const audioEl = document.getElementById("bg-audio-player");
+            if (!audioEl || !track) {
+                document.getElementById("music-current-title").textContent = "Belum ada lagu";
+                document.getElementById("music-current-artist").textContent = "Tambahkan di Admin CMS";
+                updateMusicUIState(false);
+                return;
+            }
+
+            siteData.activeTrackId = track.id;
+            saveSiteData();
+
+            document.getElementById("music-current-title").textContent = track.title;
+            document.getElementById("music-current-artist").textContent = track.artist || "Audio Latar";
+
+            if (currentObjectUrl) {
+                URL.revokeObjectURL(currentObjectUrl);
+                currentObjectUrl = null;
+            }
+
+            try {
+                if (track.sourceType === "local") {
+                    const blob = await getAudioBlobFromDB(track.id);
+                    if (!blob) {
+                        showToast("File audio lokal tidak ditemukan di browser ini.", "error");
+                        updateMusicUIState(false);
+                        return;
+                    }
+                    currentObjectUrl = URL.createObjectURL(blob);
+                    audioEl.src = currentObjectUrl;
+                } else {
+                    audioEl.src = track.url;
+                }
+
+                renderMusicLists();
+
+                if (autoPlay) {
+                    await audioEl.play();
+                    updateMusicUIState(true);
+                } else {
+                    updateMusicUIState(false);
+                }
+            } catch (err) {
+                console.warn("Autoplay dicegah browser atau gagal memutar:", err);
+                updateMusicUIState(false);
+                showToast("Klik tombol Play (ON) untuk mulai memutar lagu.", "info");
+            }
+        }
+
+        async function toggleBackgroundMusic() {
+            const audioEl = document.getElementById("bg-audio-player");
+            const track = getActiveTrack();
+            if (!track) {
+                showToast("Daftar lagu kosong. Tambahkan lagu lewat Admin!", "error");
+                return;
+            }
+
+            if (!audioEl.src) {
+                await loadTrackIntoPlayer(track, true);
+                return;
+            }
+
+            if (audioEl.paused) {
+                try {
+                    await audioEl.play();
+                    updateMusicUIState(true);
+                    showToast(`Musik ON: ${track.title}`, "success");
+                } catch (err) {
+                    showToast("Gagal memutar audio. Periksa file atau URL lagu.", "error");
+                    updateMusicUIState(false);
+                }
+            } else {
+                audioEl.pause();
+                updateMusicUIState(false);
+                showToast("Musik latar dimatikan (OFF).", "info");
+            }
+        }
+
+        function updateMusicUIState(playing) {
+            isMusicPlaying = playing;
+            const iconOff = document.getElementById("icon-music-off");
+            const iconOn = document.getElementById("icon-music-on");
+            const badge = document.getElementById("music-status-badge");
+            const eq = document.getElementById("music-eq");
+            const toggleBtn = document.getElementById("music-toggle-btn");
+
+            if (playing) {
+                iconOff.classList.add("hidden");
+                iconOn.classList.remove("hidden");
+                badge.textContent = "ON • PLAYING";
+                badge.className = "text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-400/30";
+                eq.classList.add("eq-playing");
+                toggleBtn.classList.add("ring-2", "ring-electric-400/60");
+            } else {
+                iconOff.classList.remove("hidden");
+                iconOn.classList.add("hidden");
+                badge.textContent = "OFF";
+                badge.className = "text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-white/10 text-slate-400";
+                eq.classList.remove("eq-playing");
+                toggleBtn.classList.remove("ring-2", "ring-electric-400/60");
+            }
+        }
+
+        function playNextTrack() {
+            const list = siteData.musicPlaylist || [];
+            if (list.length === 0) return;
+            const currentIndex = list.findIndex(t => t.id === siteData.activeTrackId);
+            const nextIndex = (currentIndex + 1) % list.length;
+            loadTrackIntoPlayer(list[nextIndex], true);
+        }
+
+        function selectAndPlayTrack(id) {
+            const track = (siteData.musicPlaylist || []).find(t => t.id === id);
+            if (track) {
+                loadTrackIntoPlayer(track, true);
+                document.getElementById("music-playlist-popover").classList.add("hidden");
+            }
+        }
+
+        function togglePlaylistPopover() {
+            const popover = document.getElementById("music-playlist-popover");
+            popover.classList.toggle("hidden");
+        }
+
+        function renderMusicLists() {
+            const list = siteData.musicPlaylist || [];
+            const activeId = siteData.activeTrackId;
+
+            const countBadge = document.getElementById("admin-music-count");
+            if (countBadge) countBadge.textContent = list.length;
+
+            // Render Quick Popover List
+            const quickList = document.getElementById("quick-playlist-items");
+            if (quickList) {
+                if (list.length === 0) {
+                    quickList.innerHTML = `<p class="text-[11px] text-slate-400 px-2 py-1">Tidak ada lagu.</p>`;
+                } else {
+                    quickList.innerHTML = list.map(track => {
+                        const isActive = track.id === activeId;
+                        return `
+                            <button onclick="selectAndPlayTrack('${track.id}')"
+                                class="w-full text-left px-2.5 py-2 rounded-xl text-xs flex items-center justify-between gap-2 transition cursor-pointer ${isActive ? 'bg-electric-500/25 border border-electric-400/40 text-white' : 'hover:bg-white/10 text-slate-300'}">
+                                <div class="min-w-0">
+                                    <p class="font-semibold truncate">${escapeHTML(track.title)}</p>
+                                    <p class="text-[10px] text-slate-400 truncate">${escapeHTML(track.artist)}</p>
+                                </div>
+                                <span class="text-[10px] font-bold shrink-0 ${isActive ? 'text-electric-400' : 'text-slate-500'}">
+                                    ${isActive ? 'Aktif' : 'Putar'}
+                                </span>
+                            </button>
+                        `;
+                    }).join("");
+                }
+            }
+
+            // Render Admin Music List
+            const adminList = document.getElementById("admin-music-list");
+            if (adminList) {
+                if (list.length === 0) {
+                    adminList.innerHTML = `<div class="p-5 text-center text-xs text-slate-400 rounded-2xl bg-navy-950/60 border border-white/5">Belum ada lagu di playlist. Tambahkan lagu baru di atas.</div>`;
+                } else {
+                    adminList.innerHTML = list.map(track => {
+                        const isActive = track.id === activeId;
+                        return `
+                            <div class="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-navy-950/90 border ${isActive ? 'border-electric-400/50' : 'border-white/10'}">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="w-10 h-10 rounded-xl bg-electric-500/15 border border-electric-400/30 flex items-center justify-center text-electric-400 shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                                        </svg>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <div class="flex items-center gap-2">
+                                            <p class="text-xs sm:text-sm font-bold text-white truncate">${escapeHTML(track.title)}</p>
+                                            <span class="text-[10px] px-2 py-0.5 rounded-full ${track.sourceType === 'local' ? 'bg-amber-500/20 text-amber-300' : 'bg-sky-500/20 text-sky-300'}">
+                                                ${track.sourceType === 'local' ? 'File Lokal' : 'URL Audio'}
+                                            </span>
+                                        </div>
+                                        <p class="text-[11px] text-slate-400 truncate">${escapeHTML(track.artist)}</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <button type="button" onclick="selectAndPlayTrack('${track.id}')"
+                                        class="px-3 py-1.5 rounded-lg ${isActive ? 'bg-emerald-500/25 text-emerald-300 border border-emerald-400/30' : 'bg-electric-500/20 hover:bg-electric-500 text-electric-300 hover:text-white'} text-xs font-semibold transition cursor-pointer">
+                                        ${isActive ? 'Aktif' : 'Putar'}
+                                    </button>
+                                    <button type="button" onclick="deleteMusicTrack('${track.id}')"
+                                        class="px-2.5 py-1.5 rounded-lg bg-rose-500/20 hover:bg-rose-500 text-rose-300 hover:text-white text-xs font-semibold transition cursor-pointer">
+                                        Hapus
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    }).join("");
+                }
+            }
+        }
+
+        function handleAudioFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            if (!file.type.startsWith("audio/")) {
+                showToast("File harus berupa format audio (MP3, WAV, OGG, M4A).", "error");
+                event.target.value = "";
+                return;
+            }
+            pendingAudioFile = file;
+            document.getElementById("new-music-url").value = "";
+            document.getElementById("new-audio-file-label").textContent = `Terpilih: ${file.name}`;
+
+            const titleInput = document.getElementById("new-music-title");
+            if (!titleInput.value.trim()) {
+                titleInput.value = file.name.replace(/\.[^/.]+$/, "");
+            }
+            showToast("File lagu siap ditambahkan!", "success");
+        }
+
+        function handleAudioUrlInput(val) {
+            if (val.trim()) {
+                pendingAudioFile = null;
+                document.getElementById("new-audio-file").value = "";
+                document.getElementById("new-audio-file-label").textContent = "Pilih File Lagu dari HP / Komputer";
+            }
+        }
+
+        async function addNewMusicTrack(e) {
+            e.preventDefault();
+            const title = document.getElementById("new-music-title").value.trim();
+            const artist = document.getElementById("new-music-artist").value.trim() || "Unknown Artist";
+            const urlInput = document.getElementById("new-music-url").value.trim();
+
+            if (!pendingAudioFile && !urlInput) {
+                showToast("Pilih file lagu dari perangkat atau masukkan URL audio terlebih dahulu!", "error");
+                return;
+            }
+
+            const newId = `track-${Date.now()}`;
+            let newTrack = null;
+
+            if (pendingAudioFile) {
+                try {
+                    await saveAudioBlobToDB(newId, pendingAudioFile);
+                    newTrack = {
+                        id: newId,
+                        title,
+                        artist,
+                        sourceType: "local",
+                        url: ""
+                    };
+                } catch (err) {
+                    showToast("Gagal menyimpan file audio ke penyimpanan browser.", "error");
+                    return;
+                }
+            } else {
+                newTrack = {
+                    id: newId,
+                    title,
+                    artist,
+                    sourceType: "url",
+                    url: urlInput
+                };
+            }
+
+            siteData.musicPlaylist.unshift(newTrack);
+            saveSiteData();
+
+            pendingAudioFile = null;
+            document.getElementById("new-audio-file").value = "";
+            document.getElementById("new-audio-file-label").textContent = "Pilih File Lagu dari HP / Komputer";
+            document.getElementById("new-music-title").value = "";
+            document.getElementById("new-music-artist").value = "";
+            document.getElementById("new-music-url").value = "";
+
+            renderMusicLists();
+            await loadTrackIntoPlayer(newTrack, true);
+            showToast(`Lagu "${title}" berhasil ditambahkan & diputar!`, "success");
+        }
+
+        async function deleteMusicTrack(id) {
+            const target = (siteData.musicPlaylist || []).find(t => t.id === id);
+            if (!target) return;
+
+            if (target.sourceType === "local") {
+                await deleteAudioBlobFromDB(id);
+            }
+
+            siteData.musicPlaylist = siteData.musicPlaylist.filter(t => t.id !== id);
+            saveSiteData();
+            renderMusicLists();
+
+            if (siteData.activeTrackId === id) {
+                const nextTrack = getActiveTrack();
+                await loadTrackIntoPlayer(nextTrack, false);
+            }
+            showToast("Lagu dihapus dari playlist.", "info");
+        }
+
+        // ==================== KOMPRESI & PEMBACAAN GAMBAR DARI GALERI ====================
+        let pendingGalleryImageData = "";
+
+        function compressImageFromFile(file, maxWidth = 800, quality = 0.78) {
+            return new Promise((resolve, reject) => {
+                if (!file || !file.type.startsWith("image/")) {
+                    reject(new Error("File harus berupa gambar."));
+                    return;
+                }
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        let width = img.width;
+                        let height = img.height;
+
+                        if (width > maxWidth) {
+                            height = Math.round((height * maxWidth) / width);
+                            width = maxWidth;
+                        }
+
+                        const canvas = document.createElement("canvas");
+                        canvas.width = width;
+                        canvas.height = height;
+                        const ctx = canvas.getContext("2d");
+                        ctx.drawImage(img, 0, 0, width, height);
+
+                        const compressedDataUrl = canvas.toDataURL("image/jpeg", quality);
+                        resolve(compressedDataUrl);
+                    };
+                    img.onerror = () => reject(new Error("Gagal memproses gambar."));
+                    img.src = event.target.result;
+                };
+                reader.onerror = () => reject(new Error("Gagal membaca file dari galeri."));
+                reader.readAsDataURL(file);
+            });
+        }
+
+        async function handleAvatarFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            try {
+                showToast("Memproses foto profil dari galeri...", "info");
+                const compressedUrl = await compressImageFromFile(file, 500, 0.82);
+                document.getElementById("edit-avatar").value = compressedUrl;
+                document.getElementById("edit-avatar-preview").src = compressedUrl;
+                showToast("Foto profil siap! Klik 'Simpan Perubahan Profil' untuk menerapkan.", "success");
+            } catch (err) {
+                showToast(err.message || "Gagal memuat foto profil.", "error");
+            }
+        }
+
+        function syncAvatarPreviewFromUrl(url) {
+            const preview = document.getElementById("edit-avatar-preview");
+            if (preview && url.trim()) {
+                preview.src = url.trim();
+            }
+        }
+
+        async function handleGalleryFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            try {
+                showToast("Mengoptimalkan foto dari galeri...", "info");
+                const compressedUrl = await compressImageFromFile(file, 960, 0.78);
+                pendingGalleryImageData = compressedUrl;
+                document.getElementById("new-photo-url").value = "";
+                document.getElementById("new-photo-file-label").textContent = `Terpilih: ${file.name}`;
+                document.getElementById("new-photo-preview-img").src = compressedUrl;
+                document.getElementById("new-photo-preview-box").classList.remove("hidden");
+                showToast("Foto berhasil dipilih dari galeri!", "success");
+            } catch (err) {
+                showToast(err.message || "Gagal memuat gambar.", "error");
+            }
+        }
+
+        function handleGalleryUrlInput(val) {
+            if (val.trim()) {
+                pendingGalleryImageData = "";
+                document.getElementById("new-photo-file").value = "";
+                document.getElementById("new-photo-file-label").textContent = "Pilih Foto dari Galeri HP / Perangkat";
+                document.getElementById("new-photo-preview-img").src = val.trim();
+                document.getElementById("new-photo-preview-box").classList.remove("hidden");
+            } else if (!pendingGalleryImageData) {
+                document.getElementById("new-photo-preview-box").classList.add("hidden");
+            }
+        }
+
+        // ==================== RENDER SELURUH HALAMAN ====================
+        function renderAll() {
+            const p = siteData.profile;
+
+            // Inisial & Navbar
+            const initials = p.fullName.split(" ").map(w => w[0]).slice(0, 2).join("").toUpperCase();
+            document.getElementById("nav-initials").textContent = initials || "YM";
+            document.getElementById("nav-brand-name").textContent = p.fullName;
+            document.getElementById("nav-brand-user").textContent = `@${p.username}`;
+
+            // Hero Section
+            document.getElementById("hero-fullname").textContent = p.fullName;
+            document.getElementById("hero-username").textContent = `@${p.username}`;
+            document.getElementById("hero-tagline").textContent = p.tagline;
+            document.getElementById("hero-bio").textContent = p.shortBio;
+            document.getElementById("hero-avatar").src = p.avatarUrl;
+            document.getElementById("hero-stat-gallery").textContent = siteData.gallery.length;
+
+            // About Me
+            document.getElementById("about-fullname").textContent = p.fullName;
+            document.getElementById("about-nickname").textContent = `${p.nickname} (@${p.username})`;
+            document.getElementById("about-age").textContent = p.age;
+            document.getElementById("about-location").textContent = p.location;
+            document.getElementById("about-personality").textContent = p.personality;
+
+            // Render Hobi Tags
+            const hobbiesContainer = document.getElementById("about-hobbies-list");
+            hobbiesContainer.innerHTML = p.hobbies.map(hobby => `
+                <span class="px-3 py-1.5 rounded-xl bg-navy-800/80 border border-white/10 text-xs font-medium text-slate-200">
+                    ${escapeHTML(hobby)}
+                </span>
+            `).join("");
+
+            // Render Keahlian Tags
+            const skillsContainer = document.getElementById("about-skills-list");
+            skillsContainer.innerHTML = p.skills.map(skill => `
+                <span class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-electric-600/20 to-navy-800/60 border border-electric-400/30 text-xs sm:text-sm font-semibold text-electric-400">
+                    ✦ ${escapeHTML(skill)}
+                </span>
+            `).join("");
+
+            // Render Media Sosial Cards
+            const socialGrid = document.getElementById("social-grid");
+            socialGrid.innerHTML = siteData.socials.map(soc => `
+                <div class="glass-card rounded-3xl p-6 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${soc.color} p-[1px] shadow-lg">
+                                <div class="w-full h-full rounded-2xl bg-navy-950/90 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                    ${SOCIAL_ICONS[soc.id] || SOCIAL_ICONS.instagram}
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/5 text-slate-400 border border-white/5">
+                                Official
+                            </span>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white">${escapeHTML(soc.name)}</h3>
+                        <p class="text-xs sm:text-sm text-electric-400 font-medium mt-0.5 truncate">${escapeHTML(soc.username)}</p>
+                    </div>
+
+                    <a href="${escapeHTML(soc.url)}" target="_blank" rel="noopener noreferrer"
+                        class="mt-6 w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-gradient-to-r hover:from-electric-600 hover:to-electric-400 text-slate-200 hover:text-white border border-white/10 hover:border-transparent text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2">
+                        <span>Kunjungi</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            `).join("");
+
+            // Render Galeri Foto
+            const galleryGrid = document.getElementById("gallery-grid");
+            galleryGrid.innerHTML = siteData.gallery.map(item => `
+                <div onclick="openLightbox(${item.id})"
+                    class="group relative rounded-3xl overflow-hidden glass-card aspect-[4/3] cursor-pointer">
+                    <img src="${escapeHTML(item.url)}"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/0a152e/38bdf8?text=Galeri+Foto';"
+                        alt="${escapeHTML(item.title)}"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="inline-block px-2.5 py-0.5 rounded-md bg-electric-500/30 border border-electric-400/40 text-[10px] font-semibold text-electric-300 mb-1.5">
+                            Klik Perbesar
+                        </span>
+                        <h3 class="font-display font-bold text-lg text-white leading-snug">${escapeHTML(item.title)}</h3>
+                        <p class="text-xs text-slate-300 line-clamp-1 mt-0.5">${escapeHTML(item.desc)}</p>
+                    </div>
+                </div>
+            `).join("");
+
+            // Kontak & Footer
+            const formattedWa = formatPhoneDisplay(p.whatsappNumber);
+            document.getElementById("contact-wa-display").textContent = formattedWa;
+            document.getElementById("contact-wa-btn").href = `https://wa.me/${p.whatsappNumber}`;
+            document.getElementById("contact-email-display").textContent = p.email;
+            document.getElementById("contact-mailto-btn").href = `mailto:${p.email}`;
+
+            document.getElementById("footer-name").textContent = p.fullName;
+            document.getElementById("footer-copy-name").textContent = `${p.fullName} (@${p.username})`;
+            document.getElementById("footer-year").textContent = new Date().getFullYear();
+
+            updateRoleUI();
+        }
+
+        // ==================== SISTEM AUTENTIKASI & ROLE (ADMIN VS PENGUNJUNG) ====================
+        function updateRoleUI() {
+            const roleDot = document.getElementById("role-dot");
+            const roleLabel = document.getElementById("role-label");
+            const adminEditBtn = document.getElementById("admin-edit-btn");
+            const galleryAdminBtn = document.getElementById("gallery-admin-add-btn");
+
+            if (currentRole === "admin") {
+                roleDot.className = "w-2 h-2 rounded-full bg-electric-400 animate-ping";
+                roleLabel.textContent = "Admin Aktif";
+                roleLabel.className = "text-electric-400 font-bold";
+                adminEditBtn.classList.remove("hidden");
+                adminEditBtn.classList.add("flex");
+                galleryAdminBtn.classList.remove("hidden");
+                galleryAdminBtn.classList.add("inline-flex");
+            } else {
+                roleDot.className = "w-2 h-2 rounded-full bg-emerald-400";
+                roleLabel.textContent = "Pengunjung";
+                roleLabel.className = "text-slate-200";
+                adminEditBtn.classList.add("hidden");
+                adminEditBtn.classList.remove("flex");
+                galleryAdminBtn.classList.add("hidden");
+                galleryAdminBtn.classList.remove("inline-flex");
+            }
+        }
+
+        function openAuthModal() {
+            const modal = document.getElementById("auth-modal");
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+        }
+
+        function closeAuthModal(e) {
+            if (e && e.target !== e.currentTarget) return;
+            const modal = document.getElementById("auth-modal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        }
+
+        function switchToVisitor() {
+            currentRole = "visitor";
+            localStorage.setItem(ROLE_KEY, "visitor");
+            updateRoleUI();
+            closeAuthModal();
+            showToast("Anda masuk sebagai Pengunjung (Guest).", "info");
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const user = document.getElementById("admin-user-input").value.trim();
+            const pass = document.getElementById("admin-pass-input").value.trim();
+
+            if (user === adminCredentials.username && pass === adminCredentials.password) {
+                currentRole = "admin";
+                localStorage.setItem(ROLE_KEY, "admin");
+                updateRoleUI();
+                closeAuthModal();
+                document.getElementById("admin-user-input").value = "";
+                document.getElementById("admin-pass-input").value = "";
+                showToast("Login Admin berhasil! Anda sekarang dapat mengedit portofolio.", "success");
+            } else {
+                showToast("Username atau password Admin salah!", "error");
+            }
+        }
+
+        function togglePasswordVisibility(inputId, btn) {
+            const input = document.getElementById(inputId);
+            if (!input) return;
+            const isHidden = input.type === "password";
+            input.type = isHidden ? "text" : "password";
+            btn.classList.toggle("text-electric-400", isHidden);
+            btn.classList.toggle("text-slate-400", !isHidden);
+        }
+
+        function saveAdminCredentials(e) {
+            e.preventDefault();
+            const currentPass = document.getElementById("sec-current-pass").value;
+            const newUser = document.getElementById("sec-new-user").value.trim();
+            const newPass = document.getElementById("sec-new-pass").value;
+            const confirmPass = document.getElementById("sec-confirm-pass").value;
+
+            if (currentPass !== adminCredentials.password) {
+                showToast("Password saat ini tidak sesuai!", "error");
+                return;
+            }
+            if (!newUser || newUser.length < 3) {
+                showToast("Username baru minimal 3 karakter!", "error");
+                return;
+            }
+            if (newPass.length < 6) {
+                showToast("Password baru minimal 6 karakter!", "error");
+                return;
+            }
+            if (newPass !== confirmPass) {
+                showToast("Konfirmasi password baru tidak cocok!", "error");
+                return;
+            }
+
+            adminCredentials = { username: newUser, password: newPass };
+            localStorage.setItem(AUTH_KEY, JSON.stringify(adminCredentials));
+
+            document.getElementById("sec-current-pass").value = "";
+            document.getElementById("sec-new-pass").value = "";
+            document.getElementById("sec-confirm-pass").value = "";
+            showToast("Username & Password Admin berhasil diperbarui!", "success");
+        }
+
+        // ==================== ADMIN CMS DASHBOARD ====================
+        function openAdminDashboard(defaultTab = "profile") {
+            if (currentRole !== "admin") {
+                openAuthModal();
+                return;
+            }
+            populateAdminForms();
+            switchAdminTab(defaultTab);
+            const modal = document.getElementById("admin-dashboard-modal");
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+        }
+
+        function closeAdminDashboard(e) {
+            if (e && e.target !== e.currentTarget) return;
+            const modal = document.getElementById("admin-dashboard-modal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        }
+
+        function switchAdminTab(tabName) {
+            // Reset tombol tab
+            document.querySelectorAll(".admin-tab-btn").forEach(btn => {
+                btn.classList.remove("border-electric-400", "text-electric-400");
+                btn.classList.add("border-transparent", "text-slate-400");
+            });
+            const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+            if (activeBtn) {
+                activeBtn.classList.add("border-electric-400", "text-electric-400");
+                activeBtn.classList.remove("border-transparent", "text-slate-400");
+            }
+
+            // Sembunyikan semua panel
+            document.getElementById("admin-profile-form").classList.add("hidden");
+            document.getElementById("admin-socials-form").classList.add("hidden");
+            document.getElementById("admin-gallery-panel").classList.add("hidden");
+            document.getElementById("admin-music-panel").classList.add("hidden");
+            document.getElementById("admin-messages-panel").classList.add("hidden");
+            document.getElementById("admin-security-form").classList.add("hidden");
+
+            // Tampilkan panel terpilih
+            if (tabName === "profile") document.getElementById("admin-profile-form").classList.remove("hidden");
+            if (tabName === "socials") document.getElementById("admin-socials-form").classList.remove("hidden");
+            if (tabName === "gallery") document.getElementById("admin-gallery-panel").classList.remove("hidden");
+            if (tabName === "music") {
+                document.getElementById("admin-music-panel").classList.remove("hidden");
+                renderMusicLists();
+            }
+            if (tabName === "messages") document.getElementById("admin-messages-panel").classList.remove("hidden");
+            if (tabName === "security") document.getElementById("admin-security-form").classList.remove("hidden");
+        }
+
+        function populateAdminForms() {
+            const p = siteData.profile;
+            document.getElementById("sec-new-user").value = adminCredentials.username;
+            document.getElementById("sec-current-pass").value = "";
+            document.getElementById("sec-new-pass").value = "";
+            document.getElementById("sec-confirm-pass").value = "";
+            document.getElementById("edit-fullname").value = p.fullName;
+            document.getElementById("edit-username").value = p.username;
+            document.getElementById("edit-nickname").value = p.nickname;
+            document.getElementById("edit-age").value = p.age;
+            document.getElementById("edit-location").value = p.location;
+            document.getElementById("edit-tagline").value = p.tagline;
+            document.getElementById("edit-avatar").value = p.avatarUrl;
+            document.getElementById("edit-avatar-preview").src = p.avatarUrl;
+            document.getElementById("edit-avatar-file").value = "";
+            document.getElementById("edit-wa-number").value = p.whatsappNumber;
+            document.getElementById("edit-email").value = p.email;
+            document.getElementById("edit-hobbies").value = p.hobbies.join(", ");
+            document.getElementById("edit-skills").value = p.skills.join(", ");
+            document.getElementById("edit-bio").value = p.shortBio;
+            document.getElementById("edit-personality").value = p.personality;
+
+            // Populate Socials Form
+            const socInputs = document.getElementById("admin-socials-inputs");
+            socInputs.innerHTML = siteData.socials.map((soc, idx) => `
+                <div class="p-3.5 rounded-2xl bg-navy-950/90 border border-white/10 space-y-2">
+                    <p class="text-xs font-bold text-electric-400">${soc.name}</p>
+                    <input type="text" data-soc-idx="${idx}" data-field="username" value="${escapeHTML(soc.username)}" placeholder="Username"
+                        class="w-full px-3 py-2 rounded-lg bg-navy-900 border border-white/10 text-white text-xs">
+                    <input type="url" data-soc-idx="${idx}" data-field="url" value="${escapeHTML(soc.url)}" placeholder="https://..."
+                        class="w-full px-3 py-2 rounded-lg bg-navy-900 border border-white/10 text-white text-xs">
+                </div>
+            `).join("");
+
+            // Populate Gallery List
+            renderAdminGalleryList();
+
+            // Populate Music List
+            renderMusicLists();
+
+            // Populate Messages
+            renderAdminMessages();
+        }
+
+        function saveProfileChanges(e) {
+            e.preventDefault();
+            siteData.profile.fullName = document.getElementById("edit-fullname").value.trim() || DEFAULT_CONFIG.profile.fullName;
+            siteData.profile.username = document.getElementById("edit-username").value.trim().replace(/^@/, "") || DEFAULT_CONFIG.profile.username;
+            siteData.profile.nickname = document.getElementById("edit-nickname").value.trim() || DEFAULT_CONFIG.profile.nickname;
+            siteData.profile.age = document.getElementById("edit-age").value.trim() || DEFAULT_CONFIG.profile.age;
+            siteData.profile.location = document.getElementById("edit-location").value.trim() || DEFAULT_CONFIG.profile.location;
+            siteData.profile.tagline = document.getElementById("edit-tagline").value.trim() || DEFAULT_CONFIG.profile.tagline;
+            siteData.profile.avatarUrl = document.getElementById("edit-avatar").value.trim() || DEFAULT_CONFIG.profile.avatarUrl;
+            siteData.profile.whatsappNumber = document.getElementById("edit-wa-number").value.trim().replace(/[^0-9]/g, "") || DEFAULT_CONFIG.profile.whatsappNumber;
+            siteData.profile.email = document.getElementById("edit-email").value.trim() || DEFAULT_CONFIG.profile.email;
+
+            const hobbiesRaw = document.getElementById("edit-hobbies").value;
+            siteData.profile.hobbies = hobbiesRaw.split(",").map(s => s.trim()).filter(Boolean);
+
+            const skillsRaw = document.getElementById("edit-skills").value;
+            siteData.profile.skills = skillsRaw.split(",").map(s => s.trim()).filter(Boolean);
+
+            siteData.profile.shortBio = document.getElementById("edit-bio").value.trim();
+            siteData.profile.personality = document.getElementById("edit-personality").value.trim();
+
+            if (saveSiteData()) {
+                renderAll();
+                showToast("Biodata & Foto Profil berhasil diperbarui!", "success");
+            }
+        }
+
+        function saveSocialChanges(e) {
+            e.preventDefault();
+            document.querySelectorAll("#admin-socials-inputs input").forEach(input => {
+                const idx = parseInt(input.getAttribute("data-soc-idx"), 10);
+                const field = input.getAttribute("data-field");
+                if (siteData.socials[idx]) {
+                    siteData.socials[idx][field] = input.value.trim();
+                }
+            });
+            saveSiteData();
+            renderAll();
+            showToast("Tautan Media Sosial berhasil disimpan!", "success");
+        }
+
+        function renderAdminGalleryList() {
+            const list = document.getElementById("admin-gallery-list");
+            list.innerHTML = siteData.gallery.map(item => `
+                <div class="flex items-center justify-between gap-3 p-3 rounded-2xl bg-navy-950/90 border border-white/10">
+                    <div class="flex items-center gap-3 min-w-0">
+                        <img src="${escapeHTML(item.url)}" class="w-12 h-12 rounded-xl object-cover shrink-0">
+                        <div class="min-w-0">
+                            <p class="text-xs font-bold text-white truncate">${escapeHTML(item.title)}</p>
+                            <p class="text-[11px] text-slate-400 truncate">${escapeHTML(item.desc)}</p>
+                        </div>
+                    </div>
+                    <button onclick="deleteGalleryPhoto(${item.id})" class="px-2.5 py-1.5 rounded-lg bg-rose-500/20 hover:bg-rose-500 text-rose-300 hover:text-white text-xs font-semibold transition cursor-pointer shrink-0">
+                        Hapus
+                    </button>
+                </div>
+            `).join("");
+        }
+
+        function addNewGalleryPhoto(e) {
+            e.preventDefault();
+            const urlInput = document.getElementById("new-photo-url").value.trim();
+            const finalImageSource = pendingGalleryImageData || urlInput;
+            const title = document.getElementById("new-photo-title").value.trim();
+            const desc = document.getElementById("new-photo-desc").value.trim();
+
+            if (!finalImageSource) {
+                showToast("Silakan pilih foto dari galeri atau masukkan URL gambar terlebih dahulu!", "error");
+                return;
+            }
+
+            siteData.gallery.unshift({
+                id: Date.now(),
+                title,
+                desc,
+                url: finalImageSource
+            });
+
+            if (saveSiteData()) {
+                renderAll();
+                renderAdminGalleryList();
+                pendingGalleryImageData = "";
+                document.getElementById("new-photo-file").value = "";
+                document.getElementById("new-photo-file-label").textContent = "Pilih Foto dari Galeri HP / Perangkat";
+                document.getElementById("new-photo-preview-box").classList.add("hidden");
+                document.getElementById("new-photo-url").value = "";
+                document.getElementById("new-photo-title").value = "";
+                document.getElementById("new-photo-desc").value = "";
+                showToast("Foto baru berhasil ditambahkan ke Galeri!", "success");
+            } else {
+                siteData.gallery.shift();
+            }
+        }
+
+        function deleteGalleryPhoto(id) {
+            siteData.gallery = siteData.gallery.filter(item => item.id !== id);
+            saveSiteData();
+            renderAll();
+            renderAdminGalleryList();
+            showToast("Foto dihapus dari Galeri.", "info");
+        }
+
+        function resetToDefaultData() {
+            localStorage.removeItem(STORAGE_KEY);
+            siteData = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+            saveSiteData();
+            renderAll();
+            populateAdminForms();
+            showToast("Seluruh data dikembalikan ke pengaturan awal!", "info");
+        }
+
+        // ==================== LIGHTBOX GALERI ====================
+        function openLightbox(id) {
+            const photo = siteData.gallery.find(g => g.id === id);
+            if (!photo) return;
+            document.getElementById("lightbox-img").src = photo.url;
+            document.getElementById("lightbox-title").textContent = photo.title;
+            document.getElementById("lightbox-desc").textContent = photo.desc;
+
+            const modal = document.getElementById("lightbox-modal");
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+        }
+
+        function closeLightbox(e) {
+            if (e && e.target !== e.currentTarget) return;
+            const modal = document.getElementById("lightbox-modal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        }
+
+        // ==================== KONTAK & INBOX PESAN ====================
+        function copyEmailAddress() {
+            const email = siteData.profile.email;
+            const tempInput = document.createElement("input");
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            showToast(`Email (${email}) berhasil disalin!`, "success");
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById("sender-name").value.trim();
+            const contact = document.getElementById("sender-email").value.trim();
+            const message = document.getElementById("sender-message").value.trim();
+
+            const messages = JSON.parse(localStorage.getItem(MSG_KEY) || "[]");
+            messages.unshift({
+                id: Date.now(),
+                name,
+                contact,
+                message,
+                date: new Date().toLocaleString("id-ID")
+            });
+            localStorage.setItem(MSG_KEY, JSON.stringify(messages));
+
+            document.getElementById("contact-form").reset();
+            updateInboxBadge();
+            showToast("Terima kasih! Pesan Anda telah terkirim ke Admin.", "success");
+        }
+
+        function sendViaWhatsAppForm() {
+            const name = document.getElementById("sender-name").value.trim() || "Pengunjung Web";
+            const msg = document.getElementById("sender-message").value.trim() || "Halo Yogi, saya mengunjungi website portofolio Anda!";
+            const text = encodeURIComponent(`Halo ${siteData.profile.nickname}, saya ${name}.\n\n${msg}`);
+            window.open(`https://wa.me/${siteData.profile.whatsappNumber}?text=${text}`, "_blank", "noopener,noreferrer");
+        }
+
+        function updateInboxBadge() {
+            const messages = JSON.parse(localStorage.getItem(MSG_KEY) || "[]");
+            const badge = document.getElementById("inbox-count");
+            if (badge) badge.textContent = messages.length;
+        }
+
+        function renderAdminMessages() {
+            const messages = JSON.parse(localStorage.getItem(MSG_KEY) || "[]");
+            updateInboxBadge();
+            const container = document.getElementById("admin-messages-list");
+            if (messages.length === 0) {
+                container.innerHTML = `<div class="p-6 text-center text-xs text-slate-400 rounded-2xl bg-navy-950/60 border border-white/5">Belum ada pesan masuk dari pengunjung.</div>`;
+                return;
+            }
+            container.innerHTML = messages.map(m => `
+                <div class="p-4 rounded-2xl bg-navy-950/90 border border-white/10 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                        <p class="text-xs font-bold text-white">${escapeHTML(m.name)} <span class="font-normal text-electric-400">(${escapeHTML(m.contact)})</span></p>
+                        <span class="text-[10px] text-slate-500">${escapeHTML(m.date)}</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">${escapeHTML(m.message)}</p>
+                </div>
+            `).join("");
+        }
+
+        function clearAllMessages() {
+            localStorage.removeItem(MSG_KEY);
+            renderAdminMessages();
+            showToast("Semua pesan masuk telah dibersihkan.", "info");
+        }
+
+        // ==================== TYPEWRITER ANIMATION ====================
+        const PHRASES = [
+            "Welcome to My Personal Website",
+            "Halo, Saya Yogi Ilham Maulana",
+            "Explore My Digital World (@yoginomercy)"
+        ];
+        let phraseIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+
+        function runTypewriter() {
+            const el = document.getElementById("typewriter-text");
+            if (!el) return;
+            const currentPhrase = PHRASES[phraseIdx];
+
+            if (isDeleting) {
+                el.textContent = currentPhrase.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                el.textContent = currentPhrase.substring(0, charIdx + 1);
+                charIdx++;
+            }
+
+            let speed = isDeleting ? 45 : 85;
+            if (!isDeleting && charIdx === currentPhrase.length) {
+                speed = 2200;
+                isDeleting = true;
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                phraseIdx = (phraseIdx + 1) % PHRASES.length;
+                speed = 400;
+            }
+            setTimeout(runTypewriter, speed);
+        }
+
+        // ==================== UTILITIES & EVENT LISTENERS ====================
+        function escapeHTML(str) {
+            if (!str) return "";
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;");
+        }
+
+        function formatPhoneDisplay(num) {
+            if (!num) return "";
+            if (num.startsWith("62")) {
+                return `+62 ${num.slice(2, 5)}-${num.slice(5, 9)}-${num.slice(9)}`;
+            }
+            return `+${num}`;
+        }
+
+        function showToast(message, type = "info") {
+            const container = document.getElementById("toast-container");
+            const colors = {
+                success: "border-emerald-400/50 bg-navy-900/95 text-emerald-300",
+                error: "border-rose-400/50 bg-navy-900/95 text-rose-300",
+                info: "border-electric-400/50 bg-navy-900/95 text-electric-300"
+            };
+            const toast = document.createElement("div");
+            toast.className = `pointer-events-auto px-4 py-3 rounded-2xl border backdrop-blur-xl shadow-2xl text-xs sm:text-sm font-medium transition-all duration-300 ${colors[type] || colors.info}`;
+            toast.textContent = message;
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = "0";
+                toast.style.transform = "translateY(10px)";
+                setTimeout(() => toast.remove(), 300);
+            }, 3200);
+        }
+
+        // Mobile Navbar Toggle
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+        function closeMobileMenu() {
+            mobileMenu.classList.add("hidden");
+        }
+
+        // Scroll Reveal & Back to Top Button
+        window.addEventListener("scroll", () => {
+            const backToTop = document.getElementById("back-to-top");
+            if (window.scrollY > 400) {
+                backToTop.classList.remove("opacity-0", "pointer-events-none", "translate-y-4");
+            } else {
+                backToTop.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
+            }
+        });
+
+        function initScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+        }
+
+        // Keyboard Escape untuk menutup modal
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                closeLightbox();
+                closeAuthModal();
+                closeAdminDashboard();
+            }
+        });
+
+        // Inisialisasi Saat Halaman Dimuat
+        window.addEventListener("load", () => {
+            renderAll();
+            renderMusicLists();
+            loadTrackIntoPlayer(getActiveTrack(), false);
+            updateInboxBadge();
+            initScrollReveal();
+            runTypewriter();
+
+            setTimeout(() => {
+                const loader = document.getElementById("loader-screen");
+                loader.classList.add("hidden-loader");
+            }, 650);
+        });
+    </script>
+</body>
+</html>
